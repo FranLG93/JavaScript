@@ -1,0 +1,35 @@
+
+const readlineSync = require('readline-sync');
+
+
+function calculadora() {
+    const numero1 = readlineSync.questionFloat("Introduce el primer numero: ");
+    const numero2 = readlineSync.questionFloat("Introduce el segundo numero: ");
+    const operador = readlineSync.question("Que quieres hacer (+, -, *, /): ");
+
+    let resultado; 
+
+    if (operador === '+') {
+        resultado = numero1 + numero2;
+    } else if (operador === '-') {
+        resultado = numero1 - numero2;
+    } else if (operador === '*') {
+        resultado = numero1 * numero2;
+    } else if (operador === '/') {
+        if (numero2 !== 0) {
+            resultado = numero1 / numero2;
+        } else {
+            console.log("no se puede dividir entre cero");
+            return; 
+        }
+    } else {
+        console.log("Eso no se puede hacer");
+        return; 
+    }
+
+ 
+    console.log(`El resultado de ${numero1} ${operador} ${numero2} es: ${resultado}`);
+}
+
+
+calculadora();
