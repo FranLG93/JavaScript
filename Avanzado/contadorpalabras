@@ -1,0 +1,6 @@
+const readlineSync = require('readline-sync');
+
+
+const frase = readlineSync.question("Introduce una frase: ");
+const palabras = frase.split(" ");
+console.log(`La frase "${frase}" tiene ${palabras.length} palabras.`);  
