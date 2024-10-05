@@ -1,0 +1,16 @@
+// Invertir una Cadena Escribe un programa que tome una cadena ingresada por el usuario e imprima la cadena invertida.
+
+
+const prompt = require('prompt-sync')();
+
+
+const cadena = prompt("Introduce un texto ");
+
+
+function invertirCadena(cadena) {
+    return cadena.split("").reverse().join("");
+}
+
+
+console.log("Texto invertido: " + invertirCadena(cadena));
+
