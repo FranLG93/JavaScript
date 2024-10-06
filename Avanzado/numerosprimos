@@ -1,0 +1,21 @@
+// Número Primo Pide al usuario un número y determina si es primo. Imprime un mensaje indicando si es primo o no.
+
+const prompt = require('prompt-sync')();
+
+let num = parseInt(prompt("Introduce un numero:"));
+let esprimo = num > 1;
+
+for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+        esprimo = false;
+        break;
+    }
+}
+
+
+if (esprimo) {
+    console.log(num + " es primo");
+} else {
+    console.log(num + " no es primo");
+}
+
