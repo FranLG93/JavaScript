@@ -1,0 +1,21 @@
+// Adivina el Número Crea un juego donde la máquina elija un número aleatorio entre 1 y 100. El usuario debe adivinarlo con pistas como “mayor” o “menor” hasta acertar.
+
+const prompt = require('prompt-sync')();
+
+
+
+let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+
+while (true) {
+    let intento = parseInt(prompt("Adivina el número entre 1 y 100:"));
+
+    if (intento === numeroSecreto) {
+        console.log("¡Vamoooooos! Has adivinado el numero.");
+        break;
+    } else if (intento > numeroSecreto) {
+        console.log("El numero es menor.");
+    } else {
+        console.log("El numero es mayor.");
+    }
+}
+
