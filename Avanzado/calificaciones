@@ -1,0 +1,11 @@
+//Sistema de Notas Pide al usuario su calificación y usa condicionales para determinar si aprobó o reprobó. Usa las siguientes reglas: ≥ 60 aprobado, < 60 reprobado.
+
+const readlineSync = require('readline-sync');
+
+const calificacion = readlineSync.questionInt("Introduce tu calificacionn: ");
+
+if (calificacion >= 60) {
+    console.log("Aprobado");
+} else {
+    console.log("Reprobado");
+}
