@@ -1,0 +1,16 @@
+// Calculadora de Edad Pide al usuario su fecha de nacimiento y calcula su edad actual. Usa la clase Date para realizar los cálculos.
+
+const prompt = require('prompt-sync')();
+
+let fechaNacimiento = new Date(prompt("Introduce tu fecha de nacimiento (YYYY-MM-DD):"));
+let hoy = new Date();
+
+// Calcular la edad directamente
+let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+// Ajustar si el cumpleaños aún no ha pasado este año
+if (hoy < new Date(hoy.getFullYear(), fechaNacimiento.getMonth(), fechaNacimiento.getDate())) {
+    edad--;
+}
+
+console.log(`Tienes ${edad} años.`);
