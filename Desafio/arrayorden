@@ -1,0 +1,17 @@
+// Ordenar Números de un Array Crea un array con números desordenados y escribe un programa que los ordene de menor a mayor sin usar el método .sort().
+
+let numeros = [34, 7, 23, 32, 5, 62];
+
+
+for (let i = 0; i < numeros.length; i++) {
+    for (let j = 0; j < numeros.length - 1; j++) {
+        if (numeros[j] > numeros[j + 1]) {
+           
+            let temp = numeros[j];
+            numeros[j] = numeros[j + 1];
+            numeros[j + 1] = temp;
+        }
+    }
+}
+
+console.log("Array ordenado: ", numeros);
