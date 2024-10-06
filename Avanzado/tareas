@@ -1,0 +1,54 @@
+//Gestión de Tareas (Clases y Arrays) Crea una clase Tarea con atributos nombre y completada. Crea un array de tareas y añade métodos para agregar, completar y mostrar tareas pendientes o completadas.
+
+
+class Tarea {
+    constructor(nombre, completada) {
+        this.nombre = nombre;
+        this.completada = completada;
+    }
+}   
+
+const tareas = [];  
+
+const agregarTarea = (nombre) => {
+    tareas.push(new Tarea(nombre, false));
+}
+
+const mostrarTareas = () => {
+    tareas.forEach((tarea) => {
+        if (tarea.completada) {
+            console.log(`La tarea esta completada: ${tarea.nombre}`);
+        } else {
+            console.log(`Tienes tareas pendiente: ${tarea.nombre}`);
+        }
+    });
+}
+
+const main = () => {
+    let opcion = 0;
+    do {
+        console.log("1. Agregar Tarea");
+        console.log("2. Mostrar Tareas");
+        console.log("3. Salir \n");
+
+        const readlineSync = require('readline-sync');
+        const opcion = readlineSync.questionInt("Introduce que quieres hacer: ");
+
+        switch (opcion) {
+            case 1:
+                const nombre = readlineSync.question("Introduce el nombre de la tarea: ");
+                agregarTarea(nombre);
+                break;
+            case 2:
+                mostrarTareas();
+                break;
+            case 3:
+                console.log("Chaooo");
+                break;
+            default:
+                console.log("Eso no se puede hacer");
+        }
+    } while (opcion !== 3);
+}
+
+main();
