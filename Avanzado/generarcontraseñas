@@ -1,0 +1,29 @@
+// Generador de Contraseñas Aleatorias Crea una función que genere contraseñas aleatorias de longitud n usando caracteres alfanuméricos. Pide al usuario la longitud de la contraseña y genera una.
+
+
+function contrasena(longitud) {
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let contrasena = '';
+
+    for (let i = 0; i < longitud; i++) {
+        const indicealeatorio = Math.floor(Math.random() * caracteres.length);
+        contrasena += caracteres[indicealeatorio];
+    }
+
+    return contrasena;
+
+}
+
+
+
+// Pide al usuario la longitud de la contraseña
+const prompt = require('prompt-sync')();
+
+
+
+let longitud = parseInt(prompt("Introduce la longitud de la contraseña:"));
+
+
+let contrasenaaleatoria = contrasena(longitud);
+
+console.log(`Tu contraseña generada es: ${contrasenaaleatoria}`);
