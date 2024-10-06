@@ -1,0 +1,15 @@
+// Encuentra el Número Mayor Pide tres números al usuario y determina cuál es el mayor utilizando condicionales.
+
+const prompt = require('prompt-sync')();
+
+let numero1 = parseFloat(prompt("Introduce el primer numero: "));
+let numero2 = parseFloat(prompt("Introduce el segundo numero: "));
+let numero3 = parseFloat(prompt("Introduce el tercer numero: "));
+
+if (numero1 > numero2 && numero1 > numero3) {
+    console.log("El numero mayor es: " + numero1);
+} else if (numero2 > numero1 && numero2 > numero3) {
+    console.log("El numero mayor es: " + numero2);
+} else if (numero3 > numero1 && numero3 > numero2) {
+    console.log("El numero mayor es: " + numero3);
+}
