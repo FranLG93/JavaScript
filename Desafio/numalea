@@ -1,0 +1,16 @@
+// Generar Números Aleatorios sin Repetir Escribe un programa que genere 5 números aleatorios entre 1 y 20 sin que se repitan y los muestre en pantalla.
+
+
+let numerosGenerados = new Set();
+
+while (numerosGenerados.size < 5) {
+  
+    let numeroAleatorio = Math.floor(Math.random() * 20) + 1;
+    
+   
+    numerosGenerados.add(numeroAleatorio);
+}
+
+let numerosFinales = Array.from(numerosGenerados);
+console.log("Numeros aleatorios: ", numerosFinales);
+
