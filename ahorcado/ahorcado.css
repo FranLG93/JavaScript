@@ -1,58 +1,91 @@
-h1{
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     text-align: center;
-    margin-top: 50px;
-    font-size: 36px;
-    color: #9d17d1;
+    padding: 20px;
 }
 
-p{
-    text-align: center;
-    margin-top: 20px;
+
+h1 {
+    color: #2c3e50;
+}
+
+.palabra{
     font-size: 24px;
-    color: black
-
-}
-
-#palabra{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 36px;
-    color: black    
-
-}
-hover:palabra{
-    transform: scale(2.0);
-    transition: all 0.3s ease;
-}
-input{
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: 1px solid #00000044;
-    font-size: 16px;
-    color: #000000;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-weight: bold;
     
 }
 
-button{
-    padding: 10px 20px;
+#canvasAhorcado {
+    margin: 20px auto;
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+}
+
+
+#palabra {
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+
+input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9;
+}
+
+button {
+    background-color: #245677;
+    color: #fff;
     margin: 30px;
-    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    background-color: #9d17d1;
-    color: #ffffff;
-    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 
 }
 
-button:hover{
+button:hover {
+    background-color: #2980b9;
     transform: scale(2.0);
     transition: all 0.3s ease;
+    
+}
+
+#mensaje {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#mensaje.ganaste {
+    color: #27ae60;
+}
+
+#mensaje.perdiste {
+    color: #e74c3c;
+}
+
+
+#intentos {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e67e22;
 }
